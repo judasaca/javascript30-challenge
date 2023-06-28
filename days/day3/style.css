@@ -1,0 +1,35 @@
+:root {
+  --image-padding: 5px;
+  --color: #17ffd4;
+  --blur: 0px;
+}
+body {
+  background: black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+}
+#image-container {
+  width: 70vw;
+  padding: var(--image-padding);
+  background-color: var(--color);
+  filter: blur(var(--blur));
+}
+#image-container img {
+  width: 100%;
+}
+#js {
+  color: var(--color);
+}
+input {
+  margin: 0;
+  vertical-align: middle;
+  /* display: flex; */
+}
+#manager {
+  margin-bottom: 20px;
+}

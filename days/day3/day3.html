@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Day 3</title>
+  </head>
+  <body>
+    <h1>Playing with CSS variables and <span id="js">JS</span></h1>
+    <div id="manager">
+      <label for="padding">Padding</label>
+      <input
+        type="range"
+        id="padding"
+        name="padding"
+        min="0"
+        max="30"
+        value="5"
+      />
+      <label for="blur">Blur</label>
+      <input type="range" id="blur" name="blur" min="0" max="10" value="0" />
+    </div>
+    <input type="color" id="color" value="#17ffd4" />
+
+    <div id="image-container">
+      <img
+        src="https://images.unsplash.com/photo-1585468274952-66591eb14165?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+        alt=""
+      />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
