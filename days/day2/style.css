@@ -1,0 +1,46 @@
+body {
+  background: rgb(131, 131, 131);
+}
+h1 {
+  text-align: center;
+}
+#clock {
+  background-color: rgba(255, 255, 255, 0.515);
+  border: 2px solid rgb(255, 174, 24);
+  width: 30rem;
+  height: 30rem;
+  border-radius: 100%;
+  box-shadow: 0 0 100px rgb(255, 174, 24);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+.band-container {
+  width: 100%;
+  height: 100%;
+  /* display: flex;
+  justify-content: left;
+  align-items: center; */
+  position: relative;
+  transform: translateY(-3px);
+  /* padding: 10px; */
+}
+.band {
+  background: black;
+  height: 6px;
+  width: 50%;
+  position: absolute;
+  border-radius: 50px;
+  transform-origin: 100%;
+  top: 50%;
+  /* transform: rotate(90deg); */
+}
+
+.hour {
+  /* transform: rotate(270deg); */
+}
+.minute {
+  /* width: 40%; */
+}
