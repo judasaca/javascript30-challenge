@@ -5,19 +5,26 @@ body {
   height: 100vh;
   background: black;
 }
+
 #video-container {
   position: relative;
   background: black;
-  width: 70vw;
+  width: 85vw;
+  overflow: hidden;
+}
+#video-container:hover #control-bar {
+  bottom: 0;
 }
 
 #control-bar {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -50px;
   top: 0;
   right: 0;
   display: flex;
+  transition: bottom 0.5s;
+  transition-delay: 0.2s;
 }
 #controls {
   margin-top: auto;
@@ -80,7 +87,7 @@ body {
   overflow: auto;
 
   max-width: 100%;
-  width: 20%;
+  width: 100%;
   background: rgb(164, 167, 255);
 }
 .move {
