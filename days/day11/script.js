@@ -40,12 +40,10 @@ function playPause(e) {
 let click = false;
 
 play.addEventListener("click", playPause);
-function frameAction(e) {
+function frameAction() {
   if (click) {
     pauseVideo();
-    let maxWidth = parseInt(frameBarContainer.offsetWidth);
-    let currentWidth = parseInt(frameBar.style.width.replace("px", ""));
-    let rate = currentWidth / maxWidth;
+    let rate = frameBar.value;
     video.currentTime = rate * video.duration;
   }
 }
@@ -53,20 +51,16 @@ frameBar.addEventListener("mousemove", frameAction);
 
 frameBar.addEventListener("mousedown", () => {
   click = true;
-  console.log("entro");
 });
 
 frameBar.addEventListener("mouseup", () => {
+  frameAction();
   click = false;
-  console.log("fuera");
 });
 
-function volumeAction(e) {
+function volumeAction() {
   if (click) {
-    console.log(click);
-    let maxWidth = parseInt(volumeBarContainer.offsetWidth);
-    let currentWidth = parseInt(volumeBar.style.width.replace("px", ""));
-    let rate = currentWidth / maxWidth;
+    let rate = volumeBar.value;
     video.volume = Math.min(rate, 1);
   }
 }
@@ -80,10 +74,9 @@ volumeBar.addEventListener("mouseup", () => {
 });
 
 function updateFrameBar() {
-  let maxWidth = parseInt(frameBarContainer.offsetWidth);
   let currentTime = video.currentTime;
   let maxTime = video.duration;
-  frameBar.style.width = `${(currentTime * maxWidth) / maxTime}px`;
+  frameBar.value = currentTime / maxTime;
 }
 
 function timing() {

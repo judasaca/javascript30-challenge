@@ -18,10 +18,25 @@
             <img src="pause.svg" alt="" id="pause" class="play-pause" />
           </div>
           <div id="frame-container">
-            <div id="frame"></div>
+            <input
+              type="range"
+              id="frame"
+              min="0"
+              max="1"
+              step="any"
+              value="0"
+            />
           </div>
           <div id="volume-container">
-            <div id="volume"></div>
+            <img src="sound.svg" alt="" id="sound-icon" />
+            <input
+              type="range"
+              id="volume"
+              min="0"
+              max="1"
+              step="any"
+              value="1"
+            />
           </div>
           <div id="left-container" class="move"><<</div>
           <div id="right-container" class="move">>></div>
