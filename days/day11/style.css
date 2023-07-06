@@ -1,0 +1,93 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: black;
+}
+#video-container {
+  position: relative;
+  background: black;
+  width: 70vw;
+}
+
+#control-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  display: flex;
+}
+#controls {
+  margin-top: auto;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  display: flex;
+  box-sizing: border-box;
+}
+#frame {
+  height: auto;
+  resize: horizontal;
+  overflow: auto;
+
+  max-width: 100%;
+  width: 20%;
+  background: white;
+}
+#video {
+  width: 100%;
+  height: auto;
+}
+#play-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+#pause {
+  display: none;
+  width: 70%;
+}
+.play-pause {
+  display: flex;
+  height: 20px;
+  width: auto;
+  /* width: 100%; */
+  fill: white;
+  filter: invert(99%) sepia(7%) saturate(0%) hue-rotate(120deg) brightness(117%)
+    contrast(100%);
+}
+#frame-container {
+  flex: 10;
+  display: flex;
+  overflow: hidden;
+  background: gray;
+  margin: 5px;
+}
+#volume-container {
+  flex: 10;
+  display: flex;
+  overflow: hidden;
+  background: rgb(46, 44, 103);
+  margin: 5px;
+}
+#volume {
+  height: auto;
+  resize: horizontal;
+  overflow: auto;
+
+  max-width: 100%;
+  width: 20%;
+  background: rgb(164, 167, 255);
+}
+.move {
+  flex: 1;
+  /* background: #ffffff; */
+  font-size: 20px;
+  padding: 5px;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
